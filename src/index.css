@@ -1,0 +1,37 @@
+@import "tailwindcss";
+/*@plugin "tailwindcss" as tailwindcss;*/
+/*@plugin "autoprefixer" as autoprefixer;*/
+
+/*@theme {
+    --font-sans: '"Roboto", "sans-serif"';
+}*/
+/*@layer components {*/
+/*    .gradient-card {*/
+/*        @apply w-full h-full flex bg-[radial-gradient(66.54%_102.12%_at_20.52%_135.67%,#EAF6FF_0%,#D6EDFF_100%)];*/
+/*    }*/
+/*    .group:hover .gradient-card {*/
+/*        --hover-from: #000000;*/
+/*        --hover-to: #000000;*/
+/*        background-image: radial-gradient(*/
+/*            66.54%_102.12%_at_20.52%_135.67%,*/
+/*            var(--hover-from) 0%,*/
+/*            var(--hover-to) 100%*/
+/*        );*/
+/*    }*/
+/*}*/
+
+@layer components {
+    .gradient-card {
+        @apply w-full h-full flex;
+    }
+
+    .gradient-card.card {
+        @apply transition-all;
+        background-color: var(--bg-color);
+        transition: background-color 0.3s;
+    }
+
+    .gradient-card.card:hover {
+        background-color: var(--bg-hover-color);
+    }
+}
